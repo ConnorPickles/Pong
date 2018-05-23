@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pong</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="modeSelect" class="visible">
+	  <button id="solo" class="button" onClick="changeTwo('modeSelect','diffSelect'), getMode('solo')">
+	    Single Player
+	  </button>
+	  <button id="multi" class="button" onClick="changeTwo('modeSelect','game'), getMode('multi'), start()">
+	    Multiplayer
+	  </button>
+	</div>
+	
+	<div id="diffSelect" class="hidden">
+	  <button id="easy" class="button" onClick="changeTwo('diffSelect','game'), getDiff(425)">
+	    Easy
+	  </button>
+	  <button id="medium" class="button" onClick="changeTwo('diffSelect','game'), getDiff(400)">
+	    Medium
+	  </button>
+	  <button id="hard" class="button" onClick="changeTwo('diffSelect','game'), getDiff(375)">
+	    Hard
+	  </button>
+	  <button id="extreme" class="button" onClick="changeTwo('diffSelect','game'), getDiff(350)">
+	    Extreme
+	  </button>
+	</div>
+  
+    <div id="game" class="hidden">
+	  <div id="border">
+		<div id="player">
+		</div>
+		<div id="computer">
+		</div>
+		<div id="ball">
+		</div>
+		<div id="playScore" class="score">
+	      0
+		</div>
+		<div id="compScore" class="score">
+		  0
+		</div>
+      </div>
+	</div>
+	
+  </body>
+</html>
